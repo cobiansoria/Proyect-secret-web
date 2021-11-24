@@ -14,6 +14,8 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
   lienzo.strokeStyle = color;
   lienzo.moveTo(xinicial, yinicial);
   lienzo.lineTo(xfinal, yfinal);
+  lienzo.moveTo(yinicial, xinicial);
+  lienzo.lineTo(yfinal, xfinal);
   lienzo.stroke();
   lienzo.closePath();
 }
@@ -34,6 +36,6 @@ function dibujoPorClick()
     console.log("linea " + l);
   }
 
-    dibularLinea(colorcito, 1,1,1,299);
-    dibularLinea(colorcito, 1,299,299,299);
+    dibujarLinea(colorcito, 1,1,1,299);
+    dibujarLinea(colorcito, 1,299,299,299);
 }
